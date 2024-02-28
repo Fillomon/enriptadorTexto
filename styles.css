@@ -218,6 +218,7 @@
     font-weight: 400;
     line-height: 2em;
   }
+
 /**resposive design */
 @media(max-width: 57.5em){
     .container{

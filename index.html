@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
+<!--<!DOCTYPE html>-->
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,7 +14,7 @@
         </div>
     </header>
     <main class="container">
-        <section class="">
+        <section>
             <div class="encrptar">
                 <textarea name="texto" class="texto" id="texto" cols="50" rows="10" placeholder="Ingrese el texto aqui"></textarea>
             </div>
@@ -32,21 +32,16 @@
             <img src="img/monito.png" class="monito" alt="" id="monito" />
             <!-- Zona donde se mostrara el mensaje encriptado-->
             <div class="mesaje-encriptado" id="mesaje-encriptado">
-                <h2 id="titulo-mensaje">Ningún mensaje fue encontrado</h2>
+                <p id="titulo-mensaje">Ningún mensaje fue encontrado</p>
                 <p class="parrafo" id="parrafo">Ingresa el texto que deseas encriptar o desencriptar</p>
-                <textarea class="texto-resultado"
-                name="retorno-texto"
-                id="texto-resultado"
-                cols="30"
-                rows="10"
-                readonly></textarea>
+                <input type="text" name="texto-resultado" id="texto-resultado" hidde>
             </div>
             <div class="botones">
                 <button onclick="copiarTexto()" type="button" class="btn-copiar" id="btn-copiar">Copiar</button>
             </div>
         </section>
     </main>
-    <footer>
+    <footer class="titulo-cabeza">
         <p>Copyright 2024  -  Arnulfo Aranda | Alura Latam</p>
     </footer>
     
