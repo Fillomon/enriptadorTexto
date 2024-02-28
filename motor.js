@@ -48,3 +48,11 @@ function desencriptar(){
         swal("Error", "Ingrese un mensaje para encriptar / desencriptar!!", "error");
     }
 }
+
+function copiarTexto() {
+    let textoCopiar = document.getElementById("parrafo");
+    textoCopiar.select();
+    document.execCommand("copy");
+    textoCopiar.blur();
+    alert("Texto copiado al portapapeles: " + textoCopiar.value);
+  }

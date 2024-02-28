@@ -8,30 +8,48 @@
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </head>
 <body>
-    <div class="container">
-        <div class="encrptar">
-            <textarea name="texto" class="texto" id="texto" cols="50" rows="10" placeholder="Ingrese el texto aqui"></textarea>
+    <header>
+        <div>
+            <h1 class="titulo-cabeza">Encriptacion / Desencriptar</h1>
         </div>
-        <div class="terminos">
-            <p>Solo ingrese letras minusculas y sin acéntos</p>
-        </div>
-        <div class="botones">
-            <button class="btn-encriptar" type="button" onclick="encriptar()">Encriptar</button>
-            <input type="button" class="btn-desencriptar" value="Desencriptar" onclick="desencriptar()" />
-        </div>
+    </header>
+    <main class="container">
+        <section class="">
+            <div class="encrptar">
+                <textarea name="texto" class="texto" id="texto" cols="50" rows="10" placeholder="Ingrese el texto aqui"></textarea>
+            </div>
+            <div class="terminos">
+                <p>Solo ingrese letras minusculas y sin acéntos</p>
+            </div>
+            <div class="botones">
+                <button class="btn-encriptar" type="button" onclick="encriptar()">Encriptar</button>
+                <input type="button" class="btn-desencriptar" value="Desencriptar" onclick="desencriptar()" />
+            </div>
+        </section>
+        
 <!-- Zona donde se mostrara el mensaje encriptado-->
-        <div class="encriptado">
-            <img src="img/monito.png" alt="" id="monito" />
+        <section class="encriptado">
+            <img src="img/monito.png" class="monito" alt="" id="monito" />
             <!-- Zona donde se mostrara el mensaje encriptado-->
             <div class="mesaje-encriptado" id="mesaje-encriptado">
                 <h2 id="titulo-mensaje">Ningún mensaje fue encontrado</h2>
-                <p id="parrafo">Ingresa el texto que deseas encriptar o desencriptar</p>
-               
+                <p class="parrafo" id="parrafo">Ingresa el texto que deseas encriptar o desencriptar</p>
+                <textarea class="texto-resultado"
+                name="retorno-texto"
+                id="texto-resultado"
+                cols="30"
+                rows="10"
+                readonly></textarea>
             </div>
-        </div>
-    </div>
-    <p>Copyright 2024  -  Arnulfo Aranda | Alura Latam</p>
-    <script src="motor.js"></script>
+            <div class="botones">
+                <button onclick="copiarTexto()" type="button" class="btn-copiar" id="btn-copiar">Copiar</button>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>Copyright 2024  -  Arnulfo Aranda | Alura Latam</p>
+    </footer>
     
+    <script src="motor.js"></script>
 </body>
 </html>
