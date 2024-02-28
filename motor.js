@@ -3,7 +3,7 @@ let nuevoMensaje=document.getElementById("titulo-mensaje");
 let parrafo=document.getElementById("parrafo");
 let monito=document.getElementById("monito");
 let pcopiar=document.getElementById("texto-resultado").value;
-console.log(pcopiar);
+
 
 function encriptar(){
     let textoIngresado=document.getElementById("texto").value; 
@@ -16,11 +16,9 @@ function encriptar(){
                         .replace(/u/gi,"ufat");
     pcopiar=textoEncriptado;
     if(textoIngresado.length!=0){
-        document.getElementById("texto").value=textoEncriptado;
+        document.getElementById("texto-resultado").value=textoEncriptado;
         nuevoMensaje.textContent="Mensaje encriptado con éxito!";
         document.getElementById("parrafo").textContent=textoEncriptado;/* texto parrafo derecho */
-        
-        document.getElementById("texto-resultado").textContent=textoEncriptado;
         monito.src="./img/encriptacion.jpg";
     }else{
         monito.src="./img/advertencia.png";
